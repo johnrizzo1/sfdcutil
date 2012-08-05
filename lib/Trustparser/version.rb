@@ -1,0 +1,3 @@
+module Trustparser
+  VERSION = "0.0.1"
+end
