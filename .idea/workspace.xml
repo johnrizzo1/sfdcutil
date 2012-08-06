@@ -25,7 +25,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="1" selection-start="1101" selection-end="1101" vertical-scroll-proportion="-0.81395346">
+            <state line="94" column="44" selection-start="2455" selection-end="2455" vertical-scroll-proportion="0.88372093">
               <folding />
             </state>
           </provider>
@@ -448,7 +448,11 @@
       <created>1344275684138</created>
       <updated>1344275684138</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added licensing details and updated the readme">
+      <created>1344276094215</created>
+      <updated>1344276094215</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -648,7 +652,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="1" selection-start="1101" selection-end="1101" vertical-scroll-proportion="-0.81395346">
+        <state line="94" column="44" selection-start="2455" selection-end="2455" vertical-scroll-proportion="0.88372093">
           <folding />
         </state>
       </provider>
