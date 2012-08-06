@@ -1,4 +1,75 @@
 #!/usr/bin/env ruby
 
-require 'SFDCUtil::Trust'
+require 'sfdcutil'
+require 'optparse'
+require 'ostruct'
+require 'pp'
+
+#options = {}
+
+class SFDCUtilParser
+  def self.parse(args)
+    options = OpenStruct.new
+    options.verbose = false
+    options.url = nil
+    options.instance = nil
+    script_name = File.basename($0)
+
+    opts = OptionParser.new do |opts|
+      opts.banner = "Usage: " + script_name + " COMMAND [OPTIONS]"
+      opts.separator ""
+
+      opts.separator "Commands"
+      opts.separator "     trust:status - get the status of all instances"
+
+      opts.separator ""
+      opts.separator "Options"
+
+      opts.on("-u", "--url URL", "trust URL") do |url|
+        options.url = url
+      end
+
+      opts.on("-i", "--instance INSTANCE", "which instance do you want to get the status of") do |instance|
+        options.instance = instance
+      end
+
+      opts.on("-v", "--[no-]verbose", "Run verbosely") do |v|
+        options.verbose = v
+      end
+
+      opts.on("-h", "--help", "help") do
+        puts opts
+      end
+    end
+
+    opts.parse!(args)
+    options.opts = opts
+
+    options
+  end
+end
+
+options = SFDCUtilParser.parse(ARGV)
+
+case ARGV[0]
+  when "trust:status"
+    if (options.url != nil)
+      trust = SFDCUtil::Trust.new(url)
+    else
+      trust = SFDCUtil::Trust.new
+    end
+
+    if (options.instance != nil)
+      instances = trust.get_status(options.instance)
+    else
+      instances = trust.get_all_status
+    end
+
+    puts sprintf("%12s %s", "Instance", "Status")
+    instances.each do |instance|
+      puts sprintf("%12s %s", instance[:instance], instance[:status])
+    end
+  else
+    puts options.opts
+end
 

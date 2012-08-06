@@ -1,1 +1,1 @@
-require 'SFDCUtil'
+require 'sfdcutil/trust'

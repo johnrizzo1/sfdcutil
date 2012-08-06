@@ -5,17 +5,37 @@ module SFDCUtil
 
     def initialize(url = 'http://trust.salesforce.com/status-data/status.jsp')
       @url = url
+      @instances = nil
+    end
+
+    def set_url(url)
+      unless url == nil
+        @url = url
+      end
     end
 
     def get_all_status()
       @data = gather_data()
-      puts sprintf("%12s %s", "Instance", "Status")
-      @data.each do |x|
-        puts sprintf("%12s %s", x[:instance], x[:status])
-      end
+      return @data
+      #puts sprintf("%12s %s", "Instance", "Status")
+      #@data.each do |x|
+      #  puts sprintf("%12s %s", x[:instance], x[:status])
+      #end
     end
 
-    def gather_data()
+    def get_status(instance_name)
+      @data = gather_data()
+      return @data.select { |item| item[:instance] == instance_name }
+    end
+
+    private
+
+    def gather_data(reload=false)
+      if @instances != nil &&
+          reload != true
+        return @instances
+      end
+
       html_doc = Nokogiri::HTML(open(@url))
 
       @instances = Array.new

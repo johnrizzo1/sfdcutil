@@ -1,9 +1,11 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/sfdcutil/version', __FILE__)
+$:.push File.expand_path("../lib", __FILE__)
+require 'sfdcutil/version'
+#require File.expand_path('../lib/sfdcutil/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["John Rizzo"]
-  gem.email         = ["johnrizzo1@gmail.com"]
+  gem.email         = %w(johnrizzo1@gmail.com)
   gem.description   = %q{This is a test gem.}
   gem.summary       = %q{This is a summary of teh test gem}
   gem.homepage      = ""
@@ -11,7 +13,8 @@ Gem::Specification.new do |gem|
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.name          = "SFDCUtil"
+  gem.name          = "sfdcutil"
+  #gem.require_paths = ["sfdcutil"]
   gem.require_paths = ["lib"]
   gem.version       = SFDCUtil::VERSION
 
