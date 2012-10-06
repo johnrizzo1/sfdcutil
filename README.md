@@ -93,3 +93,15 @@ I can be reached by sending an email to johnrizzo1 at gmail dot com
 ## Disclaimer
 
 I am currently a Salesforce.com employee.  The views expressed are my own and not those of salesforce.com
+
+## TODO
+
+1. Fix the code so that querying a specific POD works properly.
+
+## Versions
+
+0.4 Fixed the script so that it works properly however it is not working when you query for a single org.
+0.3 Fixed the script so that it now works with the latest site updates and prints out the proper colors for all
+    status types.
+0.2 Partially fixed an issue that occurred after the recent site changes
+0.1 Initial version

@@ -6,8 +6,8 @@ require 'sfdcutil/version'
 Gem::Specification.new do |gem|
   gem.authors       = ["John Rizzo"]
   gem.email         = %w(johnrizzo1@gmail.com)
-  gem.description   = %q{This is a test gem.}
-  gem.summary       = %q{This is a summary of teh test gem}
+  gem.description   = %q{This is a utility for querying the Salesforce.com trust site and printing the instance status.}
+  gem.summary       = %q{This is a utility for querying the Salesforce.com trust site and printing the instance status.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "sfdcutil"
   #gem.require_paths = ["sfdcutil"]
-  gem.require_paths = ["lib"]
+  gem.require_paths = %w(lib)
   gem.version       = SFDCUtil::VERSION
 
   gem.add_development_dependency 'rake'

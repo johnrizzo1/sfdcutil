@@ -5,8 +5,6 @@ require 'optparse'
 require 'ostruct'
 require 'pp'
 
-#options = {}
-
 class SFDCUtilParser
   def self.parse(args)
     options = OpenStruct.new
@@ -54,18 +52,21 @@ def colorize(text, color_code)
   "\e[#{color_code}m#{text}\e[0m"
 end
 
-def red(text); colorize(text, 31); end
-def green(text); colorize(text, 32); end
+def red(text);     colorize(text, 31) end
+def green(text);   colorize(text, 32) end
+def yellow(text);  colorize(text, 33) end
+def blue(text);    colorize(text, 34) end
+def magenta(text); colorize(text, 35) end
 
 case ARGV[0]
   when "trust:status"
-    if (options.url != nil)
+    if options.url != nil
       trust = SFDCUtil::Trust.new(url)
     else
       trust = SFDCUtil::Trust.new
     end
 
-    if (options.instance != nil)
+    if options.instance != nil
       instances = trust.get_status(options.instance)
     else
       instances = trust.get_all_status
@@ -73,12 +74,19 @@ case ARGV[0]
 
     puts sprintf("%12s %s", "Instance", "Status")
     instances.each do |instance|
-      if (instance[:status] != "Instance available")
+      if instance[:status] == "Instance available"
+        puts green("%12s %s" % [instance[:instance], instance[:status]])
+      elsif instance[:status] == "Performance issues"
+        puts yellow(sprintf("%12s %s", instance[:instance], instance[:status]))
+      elsif instance[:status] == "Service disruption"
         puts red(sprintf("%12s %s", instance[:instance], instance[:status]))
+      elsif instance[:status] == "Informational message"
+        puts blue(sprintf("%12s %s", instance[:instance], instance[:status]))
+      elsif instance[:status] == "Status not available"
+        puts magenta(sprintf("%12s %s", instance[:instance], instance[:status]))
       else
-        puts green(sprintf("%12s %s", instance[:instance], instance[:status]))
+        puts red(sprintf("%12s %s", instance[:instance], instance[:status]))
       end
-
     end
   else
     puts options.opts

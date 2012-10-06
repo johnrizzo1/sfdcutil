@@ -3,7 +3,7 @@ module SFDCUtil
     require 'open-uri'
     require 'nokogiri'
 
-    def initialize(url = 'http://trust.salesforce.com/status-data/status.jsp')
+    def initialize(url = 'http://trust.salesforce.com/trust/status/')
       @url = url
       @instances = nil
     end
@@ -15,17 +15,12 @@ module SFDCUtil
     end
 
     def get_all_status()
-      @data = gather_data()
-      return @data
-      #puts sprintf("%12s %s", "Instance", "Status")
-      #@data.each do |x|
-      #  puts sprintf("%12s %s", x[:instance], x[:status])
-      #end
+      gather_data()
     end
 
     def get_status(instance_name)
-      @data = gather_data()
-      return @data.select { |item| item[:instance] == instance_name }
+      data = gather_data()
+      data.select { |item| item[:instance] == instance_name }
     end
 
     private
@@ -39,15 +34,23 @@ module SFDCUtil
       html_doc = Nokogiri::HTML(open(@url))
 
       @instances = Array.new
-      raw_instances = html_doc.css('table#instanceTable > tbody > tr')
-      raw_status = html_doc.css('table#instanceTable > tbody > tr > td > img')
 
-      (1..raw_instances.length - 4).each do |x|
-        @instances << {:instance => raw_instances[x].content.to_s.strip,
-                       :status => raw_status[x-1].attribute('alt').to_s}
+      %w(NORTH_AMERICA APAC EMEA SANDBOX).each do |region|
+        raw_instances = html_doc.css('#instanceTable_' + region + ' * a[title]')
+        raw_status = html_doc.css('#instanceTable_' + region + ' > tbody > tr > td > img')
+
+        #puts "DEBUG " + region
+        #(0..raw_instances.length - 1).each do |x|
+        #  puts raw_instances[x].content.to_s.strip + " " + raw_status[x-1].attribute('title').to_s.strip
+        #end
+
+        (0..raw_instances.length - 1).each do |x|
+          @instances << {:instance => raw_instances[x].content.to_s.strip,
+                         :status => raw_status[x].attribute('title').to_s.strip}
+        end
       end
 
-      return @instances
+      @instances
     end
   end
 end
