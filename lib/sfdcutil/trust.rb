@@ -39,14 +39,14 @@ module SFDCUtil
         raw_instances = html_doc.css('#instanceTable_' + region + ' * a[title]')
         raw_status = html_doc.css('#instanceTable_' + region + ' > tbody > tr > td > img')
 
-        #puts "DEBUG " + region
-        #(0..raw_instances.length - 1).each do |x|
-        #  puts raw_instances[x].content.to_s.strip + " " + raw_status[x-1].attribute('title').to_s.strip
-        #end
-
         (0..raw_instances.length - 1).each do |x|
-          @instances << {:instance => raw_instances[x].content.to_s.strip,
-                         :status => raw_status[x].attribute('title').to_s.strip}
+          # Yes this is really ugly but I can't figure out why strip doesn't work
+          # I think that there is actually a multi-byte character in at [-1]
+          instance = raw_instances[x].content[0..-2]
+          status = raw_status[x].attribute('title').to_s
+
+          @instances << {:instance => instance,
+                         :status => status }
         end
       end
 
