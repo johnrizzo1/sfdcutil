@@ -52,11 +52,11 @@ def colorize(text, color_code)
   "\e[#{color_code}m#{text}\e[0m"
 end
 
-def red(text);     colorize(text, 31) end
-def green(text);   colorize(text, 32) end
-def yellow(text);  colorize(text, 33) end
-def blue(text);    colorize(text, 34) end
-def magenta(text); colorize(text, 35) end
+RED = 31
+GREEN = 32
+YELLOW = 33
+BLUE = 34
+MAGENTA = 35
 
 case ARGV[0]
   when "trust:status"
@@ -74,19 +74,20 @@ case ARGV[0]
 
     puts sprintf("%12s %s", "Instance", "Status")
     instances.each do |instance|
+      color = RED
       if instance[:status] == "Instance available"
-        puts green("%12s %s" % [instance[:instance], instance[:status]])
+        color = GREEN
       elsif instance[:status] == "Performance issues"
-        puts yellow(sprintf("%12s %s", instance[:instance], instance[:status]))
+        puts color = YELLOW
       elsif instance[:status] == "Service disruption"
-        puts red(sprintf("%12s %s", instance[:instance], instance[:status]))
+        puts color = RED
       elsif instance[:status] == "Informational message"
-        puts blue(sprintf("%12s %s", instance[:instance], instance[:status]))
+        puts color = BLUE
       elsif instance[:status] == "Status not available"
-        puts magenta(sprintf("%12s %s", instance[:instance], instance[:status]))
-      else
-        puts red(sprintf("%12s %s", instance[:instance], instance[:status]))
+        puts color = MAGENTA
       end
+
+      puts colorize(sprintf("[%12s] [%s]" % [instance[:instance], instance[:status]]), color)
     end
   else
     puts options.opts
