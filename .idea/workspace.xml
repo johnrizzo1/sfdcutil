@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f16b45c-29a9-425f-bdf0-abbe84b2eddc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/sfdcutil" afterPath="$PROJECT_DIR$/bin/sfdcutil" />
     </list>
     <ignored path="trust_parser.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,7 +20,17 @@
     <disable_hints />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="sfdcutil" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/sfdcutil">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="89" column="36" selection-start="2074" selection-end="2074" vertical-scroll-proportion="0.53125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -530,14 +540,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="192" y="28" width="1108" height="771" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.49300957" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42581603" sideWeight="0.49742457" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30696797" sideWeight="0.2537092" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30696797" sideWeight="0.36498517" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30696797" sideWeight="0.36498517" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35691318" sideWeight="0.9990069" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3559539" sideWeight="0.25827813" order="7" side_tool="true" content_ui="tabs" />
@@ -687,16 +697,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/sfdcutil">
+    <entry file="file://$PROJECT_DIR$/lib/sfdcutil/trust.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="6" selection-start="2044" selection-end="2044" vertical-scroll-proportion="0.69164264">
+        <state line="52" column="0" selection-start="1347" selection-end="1347" vertical-scroll-proportion="2.1666667">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/sfdcutil/trust.rb">
+    <entry file="file://$PROJECT_DIR$/bin/sfdcutil">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1347" selection-end="1347" vertical-scroll-proportion="2.1666667">
+        <state line="89" column="36" selection-start="2074" selection-end="2074" vertical-scroll-proportion="0.53125">
           <folding />
         </state>
       </provider>

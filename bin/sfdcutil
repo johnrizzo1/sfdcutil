@@ -87,7 +87,7 @@ case ARGV[0]
         puts color = MAGENTA
       end
 
-      puts colorize(sprintf("[%12s] [%s]" % [instance[:instance], instance[:status]]), color)
+      puts colorize(sprintf("%12s %s" % [instance[:instance], instance[:status]]), color)
     end
   else
     puts options.opts
