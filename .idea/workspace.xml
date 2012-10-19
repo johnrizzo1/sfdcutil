@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f16b45c-29a9-425f-bdf0-abbe84b2eddc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/sfdcutil" afterPath="$PROJECT_DIR$/bin/sfdcutil" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/trust_parser.iml" afterPath="$PROJECT_DIR$/.idea/trust_parser.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/sfdcutil/version.rb" afterPath="$PROJECT_DIR$/lib/sfdcutil/version.rb" />
     </list>
     <ignored path="trust_parser.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sfdcutil" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bin/sfdcutil">
+      <file leaf-file-name="trust.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/sfdcutil/trust.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="36" selection-start="2074" selection-end="2074" vertical-scroll-proportion="0.53125">
+            <state line="45" column="56" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.6676971">
               <folding />
             </state>
           </provider>
@@ -67,14 +69,14 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/sfdctrust.gemspec" />
         <option value="$PROJECT_DIR$/lib/sfdcutil/version.rb" />
-        <option value="$PROJECT_DIR$/lib/sfdcutil/trust.rb" />
         <option value="$PROJECT_DIR$/bin/sfdcutil" />
+        <option value="$PROJECT_DIR$/lib/sfdcutil/trust.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="192" />
-    <option name="y" value="28" />
+    <option name="x" value="152" />
+    <option name="y" value="69" />
     <option name="width" value="1108" />
     <option name="height" value="771" />
   </component>
@@ -120,7 +122,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -187,6 +188,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -539,24 +541,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="192" y="28" width="1108" height="771" extended-state="0" />
-    <editor active="true" />
+    <frame x="152" y="69" width="1108" height="771" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.49300957" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42581603" sideWeight="0.49742457" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30696797" sideWeight="0.2537092" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30696797" sideWeight="0.36498517" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32015067" sideWeight="0.63353115" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32015067" sideWeight="0.3560831" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35691318" sideWeight="0.9990069" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3559539" sideWeight="0.25827813" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37091988" sideWeight="0.9981114" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37091988" sideWeight="0.9981114" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937685" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.49300957" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -685,28 +687,24 @@
         <state line="17" column="0" selection-start="435" selection-end="435" vertical-scroll-proportion="0.6163683" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/sfdcutil.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="100" selection-end="100" vertical-scroll-proportion="0.15126051" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/sfdcutil/version.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="18" selection-start="34" selection-end="34" vertical-scroll-proportion="0.037783377">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/sfdcutil/trust.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1347" selection-end="1347" vertical-scroll-proportion="2.1666667">
-          <folding />
-        </state>
+        <state line="1" column="18" selection-start="34" selection-end="34" vertical-scroll-proportion="0.037783377" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/sfdcutil">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="36" selection-start="2074" selection-end="2074" vertical-scroll-proportion="0.53125">
+        <state line="89" column="36" selection-start="2074" selection-end="2074" vertical-scroll-proportion="0.53125" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/sfdcutil.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="100" selection-end="100" vertical-scroll-proportion="0.13910356" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/sfdcutil/trust.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="56" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.6676971">
           <folding />
         </state>
       </provider>
