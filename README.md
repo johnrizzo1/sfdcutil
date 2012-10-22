@@ -38,13 +38,13 @@ Or install it yourself:
         -v, --[no-]verbose               Run verbosely
         -h, --help                       help
 
-    Getting a single instance status
+Getting a single instance status
 
     $ sfdcutil trust:status --instance "NA1"
         Instance Status
             NA1 Instance available
 
-    Get a status of all instances
+Get a status of all instances
 
     $ sfdcutil trust:status
         Instance Status
