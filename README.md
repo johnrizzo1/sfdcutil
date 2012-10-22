@@ -126,7 +126,7 @@ timely fashion. If critical issues for a particular implementation exist at the
 time of a major release, support for that Ruby version may be dropped.
 
 ## Copyright
-Copyright (c) 2011 John Rizzo.
+Copyright (c) 2012 John Rizzo.
 See [LICENSE][] for details.
 [license]: https://github.com/intridea/oauth2/blob/master/LICENSE.md
 
