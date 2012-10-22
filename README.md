@@ -1,3 +1,5 @@
+# SFDCUtil [![Build Status](https://secure.travis-ci.org/johnrizzo1/sfdcutil.png?branch=master)][travis] [![Dependency Status](https://gemnasium.com/johnrizzo1/sfdcutil.png?travis)][gemnasium]
+
 # SFDCUtil
 
 SFDCUtil is a set of libraries that I've created to help me perform common tasks for working with salesforce.com
