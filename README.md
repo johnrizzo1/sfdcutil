@@ -30,7 +30,7 @@ Or install it yourself:
     Usage: sfdcutil COMMAND [OPTIONS]
 
     Commands
-         trust:status - get the status of all instances
+         status - get the status of all instances
 
     Options
         -u, --url URL                    trust URL
@@ -40,13 +40,13 @@ Or install it yourself:
 
 Getting a single instance status
 
-    $ sfdcutil trust:status --instance "NA1"
+    $ sfdcutil status --instance "NA1"
         Instance Status
             NA1 Instance available
 
 Get a status of all instances
 
-    $ sfdcutil trust:status
+    $ sfdcutil status
         Instance Status
      AP0 (Japan) Instance available
       AP1 (APAC) Instance available
