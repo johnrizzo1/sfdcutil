@@ -36,5 +36,5 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency 'nokogiri'
   gem.add_runtime_dependency 'thor'
-  #gem.add_runtime_dependency 'term-ansicolor'
+  gem.add_runtime_dependency 'term-ansicolor'
 end

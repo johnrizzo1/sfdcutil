@@ -6,14 +6,13 @@ require 'rspec/core/rake_task'
 
 RSpec::Core::RakeTask.new
 
-# Validate the Travis config file
-desc "Testing travis config"
+desc "Validate the Travis config"
 task :travis do
   system "travis-lint"
 end
 
 require 'rdoc/task'
-
+desc "Generate RDOC documentation"
 Rake::RDocTask.new(:rdoc) do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
   rdoc.rdoc_dir = 'rdoc'
@@ -28,11 +27,11 @@ end
 
 require 'cucumber'
 require 'cucumber/rake/task'
-desc "Test Cucumber Features"
+desc "Test Features"
 Cucumber::Rake::Task.new(:features, 'sfdcutil')
-# do |t|
-#  t.cucumber_opts = "features --format pretty"
-#end
 
+desc "Run the default tasks"
 task :default => [:spec, :travis]
+
+desc "Run All Tests"
 task :test => [:spec, :features]

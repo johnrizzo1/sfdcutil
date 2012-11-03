@@ -1,8 +1,13 @@
 require 'thor'
 require 'sfdcutil/trust'
+require 'term/ansicolor'
 
 module SFDCUtil
+
   class CLI < Thor
+
+    include Term::ANSIColor
+
     desc "status", "Retrieve the trust status"
     method_option :instance,
                   :aliases => "-i",
@@ -28,46 +33,68 @@ module SFDCUtil
     end
 
     no_tasks do
-
-      def colorize(text, color_code)
-        "\e[#{color_code}m#{text}\e[0m"
-      end
-
-      RED = 31
-      GREEN = 32
-      YELLOW = 33
-      BLUE = 34
-      MAGENTA = 35
-
       def print_instances(instances)
         puts sprintf("%12s %s", "Instance", "Status")
         instances.each do |instance|
+          message = sprintf("%12s %s" % [instance[:instance], instance[:status]])
           if instance[:status] == "Instance available"
-            color = GREEN
-            #color = green
+            puts green(message)
           elsif instance[:status] == "Performance issues"
-            color = YELLOW
-            #color = yellow
+            puts yellow(message)
           elsif instance[:status] == "Service disruption"
-            color = RED
-            #color = red
+            puts red(message)
           elsif instance[:status] == "Informational message"
-            color = BLUE
-            #color = blue
+            puts blue(message)
           elsif instance[:status] == "Status not available"
-            color = MAGENTA
-            #color = magenta
+            puts magenta(message)
           else
-            color = RED
-            #color = red
+            puts red(message)
           end
-
-          puts colorize(sprintf("%12s %s" % [instance[:instance], instance[:status]]), color)
-          #puts color(sprintf("%12s %s" % [instance[:instance], instance[:status]]))
-          #puts sprintf("%12s %s" % [instance[:instance], instance[:status]])
         end
       end
     end
+
+    #no_tasks do
+    #
+    #  def colorize(text, color_code)
+    #    "\e[#{color_code}m#{text}\e[0m"
+    #  end
+    #
+    #  RED = 31
+    #  GREEN = 32
+    #  YELLOW = 33
+    #  BLUE = 34
+    #  MAGENTA = 35
+    #
+    #  def print_instances(instances)
+    #    puts sprintf("%12s %s", "Instance", "Status")
+    #    instances.each do |instance|
+    #      if instance[:status] == "Instance available"
+    #        color = GREEN
+    #        #color = green
+    #      elsif instance[:status] == "Performance issues"
+    #        color = YELLOW
+    #        #color = yellow
+    #      elsif instance[:status] == "Service disruption"
+    #        color = RED
+    #        #color = red
+    #      elsif instance[:status] == "Informational message"
+    #        color = BLUE
+    #        #color = blue
+    #      elsif instance[:status] == "Status not available"
+    #        color = MAGENTA
+    #        #color = magenta
+    #      else
+    #        color = RED
+    #        #color = red
+    #      end
+    #
+    #      puts colorize(sprintf("%12s %s" % [instance[:instance], instance[:status]]), color)
+    #      #puts color(sprintf("%12s %s" % [instance[:instance], instance[:status]]))
+    #      #puts sprintf("%12s %s" % [instance[:instance], instance[:status]])
+    #    end
+    #  end
+    #end
 
   end
 end
