@@ -106,10 +106,7 @@ I am currently a Salesforce.com employee.  The views expressed are my own and no
 This library aims to support and is [tested against][travis] the following Ruby
 implementations:
 
-* Ruby 1.9.3
-* [JRuby][]
-
-[jruby]: http://www.jruby.org/
+* Ruby 1.9.3-p194
 
 If something doesn't work on one of these interpreters, it should be considered
 a bug.
