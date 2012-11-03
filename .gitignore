@@ -1,3 +1,9 @@
+# Bundler command stubs
+bundler_stubs
+
+# Bundler Packages
+pkg
+
 # rcov generated
 coverage
 coverage.data
