@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
-require "sfdcutil/cli"
+require 'sfdcutil/cli'
+require 'sfdcutil/status'
 
 SFDCUtil::CLI.start

@@ -1,7 +1,7 @@
 Feature: status
   In order to query the salesforce trust site
   As a CLI
-  I want to be as objective as possible
+  I want to be able to list the status of the PODS or a specific POD
 
   Scenario: Query for the status of a specific POD
     When I run `sfdcutil status --instance NA1`
